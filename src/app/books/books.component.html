@@ -1,4 +1,7 @@
 <h2>books works!</h2>
+<button [disabled]="isDisabled">Show books</button>
 <ul>
-  <li>{{ name }} by {{ author }}</li>
+  <li>
+    <img [src]="src" alt="{{ name }}" width="100"/>
+    {{ name }} by {{ author }}</li>
 </ul>
