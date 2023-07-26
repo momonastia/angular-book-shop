@@ -1,5 +1,7 @@
 <h2>books works!</h2>
-<button [disabled]="isDisabled">Show books</button>
+<button (click)="handleClick()" [disabled]="isDisabled">Show books</button>
+<input type="text" [(ngModel)]="myName" >
+<div>{{ myName }}</div>
 <ul>
   <li>
     <img [src]="src" alt="{{ name }}" width="100"/>
