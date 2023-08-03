@@ -22,7 +22,13 @@ export class BooksComponent {
     },
   ]
 
+  cart: Book[] = [];
+
   isShowing: boolean = true;
+
+  addToCart(event: Book) {
+    console.log(event)
+  }
 
 /*   isDisabled: boolean = false */
 
