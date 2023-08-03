@@ -1,0 +1,6 @@
+.book-card {
+  text-decoration: none;
+  width: 8rem;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
