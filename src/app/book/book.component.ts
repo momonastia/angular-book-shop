@@ -6,13 +6,13 @@ import { Book } from '../interface/Book';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
-export class BookComponent implements OnInit, OnDestroy {
+export class BookComponent {
 
-  myInterval: any = null;
+ /*  myInterval: any = null;
 
   ngOnInit(): void {
     this.myInterval = setInterval(() => {console.log("Hello!")}, 1000)
-  }
+  } */
 
   @Input() book: Book = {} as Book
   @Output() bookEmitter = new EventEmitter<Book>()
@@ -21,7 +21,7 @@ export class BookComponent implements OnInit, OnDestroy {
     this.bookEmitter.emit(this.book)
   }
 
-  ngOnDestroy(): void {
+  /* ngOnDestroy(): void {
     clearInterval(this.myInterval);
-  }
+  } */
 }
