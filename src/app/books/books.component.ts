@@ -14,7 +14,7 @@ export class BooksComponent {
     this.books = this.booksService.getBooks()
   }
 
-  books: Book[] = [];
+  books: Book[] = []
 
   cart: Book[] = [];
 
