@@ -17,6 +17,7 @@ export class BookComponent {
 
   @Input() book: Book = {} as Book
  /*  @Output() bookEmitter = new EventEmitter<Book>() */
+  isInCart: boolean = false
 
   constructor(
     private cartService: CartService
@@ -24,7 +25,13 @@ export class BookComponent {
 
   addToCart(){
     this.cartService.add(this.book)
+    this.isInCart = true
   /*   this.bookEmitter.emit(this.book) */
+  }
+
+  removeFromCart(){
+    this.cartService.remove(this.book)
+    this.isInCart = false
   }
 
   /* ngOnDestroy(): void {
