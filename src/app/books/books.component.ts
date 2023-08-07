@@ -16,20 +16,16 @@ export class BooksComponent {
 
   books: Book[] = []
 
-  cart: Book[] = [];
-
   isShowing: boolean = true;
-
+/*
   addToCart(event: Book) {
     console.log(event)
-  }
+  } */
 
 /*   isDisabled: boolean = false */
 
   /* handleClick() {
     this.isDisabled = true;
   }
-
-  myName: string = "";
  */
   }
