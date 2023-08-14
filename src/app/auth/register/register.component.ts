@@ -15,9 +15,15 @@ export class RegisterComponent {
     confirmPassword: ""
   }
 
+  isLoading: boolean = false;
+
   passwordMached: boolean = true;
 
   submit() {
+    if(this.isLoading) return;
+
+    this.isLoading = true;
+
     if(this.form.password !== this.form.confirmPassword) {
       this.passwordMached = false;
       return;
@@ -31,9 +37,10 @@ export class RegisterComponent {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
-     });
-
-    console.log(this.form)
+     })
+     .finally (() => {
+      this.isLoading = false;
+    })
   }
 
 }
