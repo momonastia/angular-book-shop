@@ -15,13 +15,17 @@ export class RegisterComponent {
     confirmPassword: ""
   }
 
+  passwordMached: boolean = true;
+
   submit() {
+    if(this.form.password !== this.form.confirmPassword) {
+      this.passwordMached = false;
+      return;
+    }
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
     .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    // ...
+      console.log(userCredential)
      })
     .catch((error) => {
     const errorCode = error.code;
