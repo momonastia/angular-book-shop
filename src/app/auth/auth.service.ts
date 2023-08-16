@@ -57,7 +57,6 @@ export class AuthService {
     this.isAuthenticated = false;
     const errorCode = error.code;
     const errorMessage = error.message;
-    // ..
      })
      .finally (() => {
       this.isLoading = false;
@@ -70,7 +69,6 @@ export class AuthService {
       this.router.navigate(["login"])
       this.isAuthenticated = false;
     }).catch((error) => {
-      // An error happened.
     });
   }
 }
