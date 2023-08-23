@@ -1,0 +1,20 @@
+.book-card {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book-image img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.book-info {
+  
+}
+
+.title {
+  width: 100%;
+}

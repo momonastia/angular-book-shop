@@ -1,7 +1,9 @@
-ul {
+.books-section {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  gap: 2rem;
+  color: #559994;
 }
 
 
