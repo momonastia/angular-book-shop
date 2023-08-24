@@ -6,7 +6,6 @@
     <a routerLink="cart" class="m-2" matTooltip="Please login to access the cart" [matTooltipDisabled]="isAuthenticated()">
       My Cart
     </a>
-
     <ng-container *ngIf="!isAuthenticated()">
       <a routerLink="login" class="m-2">Login</a>
       <a routerLink="register" class="m-2">Register</a>
