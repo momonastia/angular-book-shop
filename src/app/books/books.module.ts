@@ -4,8 +4,6 @@ import { BooksService } from './books.service';
 import { BooksComponent } from './books.component';
 import { BookComponent } from '../book/book.component';
 
-
-
 @NgModule({
   declarations: [BooksComponent, BookComponent],
   imports: [
