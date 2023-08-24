@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { BooksModule } from './books/books.module';
 import { CartComponent } from './cart/cart.component';
 import { AuthModule } from './auth/auth.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AuthModule } from './auth/auth.module';
     AppRoutingModule,
     FormsModule,
     BooksModule,
-    AuthModule
+    AuthModule,
+    BrowserAnimationsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
