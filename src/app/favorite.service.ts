@@ -16,7 +16,7 @@ export class FavoriteService {
     if (!this.favorites.includes(book)) {
       this.favorites.push(book);
     }
-    console.log(this.favorites)
+    console.log("Added", this.favorites)
   }
 
   removeFromFavorites(book: Book): void {
@@ -24,6 +24,11 @@ export class FavoriteService {
     if (index !== -1) {
       this.favorites.splice(index, 1);
     }
+    console.log("Removed", this.favorites)
+  }
+
+  isFavorite(book: Book): boolean {
+    return this.favorites.some(favorite => favorite.name === book.name);
   }
 
   constructor() { }

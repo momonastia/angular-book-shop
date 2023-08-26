@@ -22,7 +22,7 @@ export class BookComponent {
 
   constructor(
     private cartService: CartService,
-    private favoriteService: FavoriteService
+    public favoriteService: FavoriteService
     ) {}
 
   addToCart(){
@@ -36,8 +36,12 @@ export class BookComponent {
     this.isInCart = false
   }
 
-  addToFavorite(){
-    this.favoriteService.addToFavorites(this.book)
+  toggleFavorites(book: Book): void {
+    if (this.favoriteService.isFavorite(book)) {
+      this.favoriteService.removeFromFavorites(book);
+    } else {
+      this.favoriteService.addToFavorites(book);
+    }
   }
 
   /* ngOnDestroy(): void {
