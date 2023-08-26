@@ -8,11 +8,13 @@ import { CartComponent } from './cart/cart.component';
 import { AuthModule } from './auth/auth.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
+    FavoritesComponent,
   ],
   imports: [
     BrowserModule,
