@@ -21,6 +21,12 @@
   text-align: center;
 }
 
+.btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .add-btn, .remove-btn {
   background-color: var(--second-color);
   border-radius: 10px;
@@ -37,4 +43,8 @@
 
 .remove-btn:hover {
   background-color: rgb(255, 106, 106);
+}
+
+.favorite-btn {
+  cursor: pointer;
 }
