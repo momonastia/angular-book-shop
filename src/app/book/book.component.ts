@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Book } from '../interface/Book';
 import { CartService } from '../services/cart.service';
+import { FavoriteService } from '../favorite.service';
 
 @Component({
   selector: 'app-book',
@@ -20,8 +21,9 @@ export class BookComponent {
   isInCart: boolean = false
 
   constructor(
-    private cartService: CartService
-  ) {}
+    private cartService: CartService,
+    private favoriteService: FavoriteService
+    ) {}
 
   addToCart(){
     this.cartService.add(this.book)
@@ -32,6 +34,10 @@ export class BookComponent {
   removeFromCart(){
     this.cartService.remove(this.book)
     this.isInCart = false
+  }
+
+  addToFavorite(){
+    this.favoriteService.addToFavorites(this.book)
   }
 
   /* ngOnDestroy(): void {
