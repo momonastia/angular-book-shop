@@ -3,6 +3,9 @@
     <h1>Book shop</h1>
   </a>
   <div>
+    <a routerLink="favorites">
+      Favorites
+    </a>
     <a routerLink="cart" class="m-2" matTooltip="Please login to access the cart" [matTooltipDisabled]="isAuthenticated()">
       My Cart
     </a>
@@ -13,7 +16,9 @@
     <ng-container *ngIf="isAuthenticated()">
       <button (click)="logout()" class="mx-4">Logout</button>
     </ng-container>
+
   </div>
+
 </nav>
 <div class="p-4">
   <router-outlet></router-outlet>

@@ -5,11 +5,13 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { authGuard } from './auth/auth.guard';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 const routes: Routes = [
   {path: "", component: BooksComponent},
   {path: "cart", component: CartComponent, canActivate: [authGuard]},
   {path: "login", component: LoginComponent},
+  {path: "favorites", component: FavoritesComponent},
   {path: "register", component: RegisterComponent}
 ];
 
