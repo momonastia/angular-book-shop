@@ -21,10 +21,10 @@ export class FavoriteService {
 
   removeFromFavorites(book: Book): void {
     const index = this.favorites.indexOf(book);
-    if (index !== -1) {
+    if (this.favorites.some(favorite => favorite.name === book.name)) {
       this.favorites.splice(index, 1);
+      console.log("Removed", this.favorites)
     }
-    console.log("Removed", this.favorites)
   }
 
   isFavorite(book: Book): boolean {

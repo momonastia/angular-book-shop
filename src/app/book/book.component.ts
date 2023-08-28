@@ -42,6 +42,11 @@ export class BookComponent {
     } else {
       this.favoriteService.addToFavorites(book);
     }
+    console.log('After toggle:', this.favoriteService.isFavorite(book));
+  }
+
+  isFavorite(book: Book): boolean {
+    return this.favoriteService.isFavorite(book);
   }
 
   /* ngOnDestroy(): void {

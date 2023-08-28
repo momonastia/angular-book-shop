@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FavoriteService } from '../favorite.service';
 import { Book } from '../interface/Book';
 
@@ -7,21 +7,13 @@ import { Book } from '../interface/Book';
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.css']
 })
-export class FavoritesComponent {
+export class FavoritesComponent implements OnInit {
 
-  favorites: Book[] = [];
+  constructor(public favoriteService: FavoriteService) {}
 
-  constructor(
-    public favoriteService: FavoriteService
-  ){}
-
-  ngOnInit(): void {
-    this.favorites = this.favoriteService.getFavorites();
-  }
+  ngOnInit(): void {}
 
   removeFromFavorites(book: Book): void {
     this.favoriteService.removeFromFavorites(book);
-    this.favorites = this.favoriteService.getFavorites();
   }
-
 }
