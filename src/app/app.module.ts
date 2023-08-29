@@ -7,7 +7,7 @@ import { BooksModule } from './books/books.module';
 import { CartComponent } from './cart/cart.component';
 import { AuthModule } from './auth/auth.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({

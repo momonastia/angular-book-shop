@@ -16,14 +16,12 @@ export class FavoriteService {
     if (!this.favorites.includes(book)) {
       this.favorites.push(book);
     }
-    console.log("Added", this.favorites)
   }
 
   removeFromFavorites(book: Book): void {
     const index = this.favorites.indexOf(book);
     if (this.favorites.some(favorite => favorite.name === book.name)) {
       this.favorites.splice(index, 1);
-      console.log("Removed", this.favorites)
     }
   }
 

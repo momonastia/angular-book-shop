@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let book of favoriteService.getFavorites()">
-    {{ book.name }} <button (click)="removeFromFavorites(book)">Remove</button>
-  </li>
+<ul class="books-list">
+  <li *ngFor="let singleBook of favoriteService.getFavorites()">
+     <app-book [book]="singleBook"></app-book>
+ </li>
 </ul>
