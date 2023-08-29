@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/angular-book-shop-fa147",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
