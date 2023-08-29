@@ -10,6 +10,6 @@ import { BookComponent } from '../book/book.component';
     CommonModule
   ],
   providers: [BooksService],
-  exports: [BooksComponent],
+  exports: [BooksComponent, BookComponent],
 })
 export class BooksModule { }

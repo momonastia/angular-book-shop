@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FavoriteService } from '../favorite.service';
 import { Book } from '../interface/Book';
 
@@ -8,6 +8,8 @@ import { Book } from '../interface/Book';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
+
+  @Input() book: Book = {} as Book
 
   constructor(public favoriteService: FavoriteService) {}
 
