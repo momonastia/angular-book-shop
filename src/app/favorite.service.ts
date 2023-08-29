@@ -19,8 +19,8 @@ export class FavoriteService {
   }
 
   removeFromFavorites(book: Book): void {
-    const index = this.favorites.indexOf(book);
-    if (this.favorites.some(favorite => favorite.name === book.name)) {
+    const index = this.favorites.findIndex(favorite => favorite.id === book.id);
+    if (index !== -1) {
       this.favorites.splice(index, 1);
     }
   }
