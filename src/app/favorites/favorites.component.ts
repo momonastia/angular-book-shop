@@ -7,13 +7,11 @@ import { Book } from '../interface/Book';
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.css']
 })
-export class FavoritesComponent implements OnInit {
+export class FavoritesComponent {
 
   @Input() book: Book = {} as Book
 
   constructor(public favoriteService: FavoriteService) {}
-
-  ngOnInit(): void {}
 
   removeFromFavorites(book: Book): void {
     this.favoriteService.removeFromFavorites(book);
