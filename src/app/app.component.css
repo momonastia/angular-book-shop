@@ -1,3 +1,14 @@
 .navbar {
   background-color: var(--main-color);
 }
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 4rem;
+}
