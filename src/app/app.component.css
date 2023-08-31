@@ -9,6 +9,16 @@
   gap: 1rem;
 }
 
+.logo-container h1 {
+  font-size: 2rem;
+}
+
 .logo {
   height: 4rem;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
