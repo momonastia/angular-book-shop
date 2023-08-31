@@ -1,21 +1,21 @@
-<nav class="flex justify-between p-4 mb-4 bg-purple-800 text-white navbar">
+<nav class="flex justify-between content-center p-4 mb-4 bg-purple-800 text-white navbar">
   <a routerLink="" class="logo-container">
     <img class="logo" src="/assets/book_store.png" alt="">
     <h1>Book store</h1>
   </a>
-  <div>
-    <a routerLink="favorites">
+  <div class="flex flex-row content-center text-xl">
+    <a routerLink="favorites" class="m-2 menu-item">
       Favorites
     </a>
-    <a routerLink="cart" class="m-2" matTooltip="Please login to access the cart" [matTooltipDisabled]="isAuthenticated()">
+    <a routerLink="cart" class="m-2 menu-item" matTooltip="Please login to access the cart" [matTooltipDisabled]="isAuthenticated()">
       My Cart
     </a>
     <ng-container *ngIf="!isAuthenticated()">
-      <a routerLink="login" class="m-2">Login</a>
-      <a routerLink="register" class="m-2">Register</a>
+      <a routerLink="login" class="m-2 menu-item">Login</a>
+      <a routerLink="register" class="m-2 menu-item">Register</a>
     </ng-container>
     <ng-container *ngIf="isAuthenticated()">
-      <button (click)="logout()" class="mx-4">Logout</button>
+      <button (click)="logout()" class="mx-4 menu-item">Logout</button>
     </ng-container>
 
   </div>
